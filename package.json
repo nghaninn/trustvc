@@ -1,0 +1,19 @@
+{
+  "name": "trustvc-core",
+  "version": "0.0.0",
+  "description": "TrustVC core library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trustvc/trustvc-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trustvc/trustvc-core/issues"
+  },
+  "homepage": "https://github.com/trustvc/trustvc-core#readme"
+}
