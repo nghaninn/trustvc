@@ -8,6 +8,7 @@ module.exports = {
     {
       name: 'v1',
       prerelease: 'alpha',
+      range: '1.x',
     },
   ],
   github: true,
