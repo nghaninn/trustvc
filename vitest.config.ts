@@ -11,9 +11,14 @@ export default defineConfig({
       tsconfigPath: 'tsconfig.test.json',
     }),
   ],
-  cacheDir: './node_modules/.vitest',
+  cacheDir: 'node_modules/.vitest',
   test: {
     include: ['**/*.test.{ts,js}'],
+    server: {
+      deps: {
+        inline: ['@govtechsg/oa-verify', '@tradetrust-tt/tt-verify'], // Inline oa-verify package directly
+      },
+    },
     exclude: ['dist', 'node_modules', '*/type{s}.{ts,js}'],
     coverage: {
       enabled: true,
