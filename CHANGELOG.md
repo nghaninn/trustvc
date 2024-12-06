@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/TrustVC/trustvc/compare/v1.0.2...v1.0.3) (2024-12-06)
+
+
+### Bug Fixes
+
+* update w3c package ([#24](https://github.com/TrustVC/trustvc/issues/24)) ([26d4371](https://github.com/TrustVC/trustvc/commit/26d4371fe0dbb477ed112240be2db7fa13c39a95))
+
 ## [1.0.2](https://github.com/TrustVC/trustvc/compare/v1.0.1...v1.0.2) (2024-12-06)
 
 
