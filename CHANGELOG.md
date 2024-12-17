@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/TrustVC/trustvc/compare/v1.0.4...v1.0.5) (2024-12-17)
+
+
+### Bug Fixes
+
+* credential status to verify set ([#26](https://github.com/TrustVC/trustvc/issues/26)) ([b869b9e](https://github.com/TrustVC/trustvc/commit/b869b9ed66e7f41e00c17efabf6990796ee9121f))
+
 ## [1.0.4](https://github.com/TrustVC/trustvc/compare/v1.0.3...v1.0.4) (2024-12-13)
 
 
