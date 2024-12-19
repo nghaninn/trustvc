@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/TrustVC/trustvc/compare/v1.0.5...v1.1.0) (2024-12-19)
+
+
+### Features
+
+* endorsement chain ([#27](https://github.com/TrustVC/trustvc/issues/27)) ([58c184a](https://github.com/TrustVC/trustvc/commit/58c184a2d1694978e6dd8a55c85c86aa7a9b1212))
+
 ## [1.0.5](https://github.com/TrustVC/trustvc/compare/v1.0.4...v1.0.5) (2024-12-17)
 
 
