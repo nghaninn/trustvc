@@ -27,3 +27,13 @@ export type TransferableRecordsVerificationFragment =
   | TransferableRecordsResultFragment
   | TransferableRecordsErrorFragment;
 export type VerifierType = Verifier<TransferableRecordsVerificationFragment>;
+
+export type TransferableRecordCredentialStatus = {
+  type: 'TransferableRecords';
+  tokenRegistry: string;
+  tokenId?: string;
+  tokenNetwork: {
+    chainId: number;
+    name: string;
+  };
+};
