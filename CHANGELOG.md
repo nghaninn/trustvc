@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nghaninn/trustvc/compare/v1.0.0...v1.0.1) (2024-12-20)
+
+
+### Bug Fixes
+
+* import ([a51ca5b](https://github.com/nghaninn/trustvc/commit/a51ca5b79cbb297654b1625c6a5c5064966f6fc4))
+
 ## 1.0.0 (2024-12-20)
 
 
