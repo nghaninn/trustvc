@@ -1,5 +1,5 @@
 module.exports = {
-  repositoryUrl: 'https://github.com/TrustVC/trustvc.git',
+  repositoryUrl: 'https://github.com/nghaninn/trustvc.git',
   branches: [
     {
       name: 'main',

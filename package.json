@@ -1,6 +1,6 @@
 {
-  "name": "@trustvc/trustvc",
-  "version": "1.1.0",
+  "name": "@nghaninn/trustvc",
+  "version": "0.0.0",
   "description": "TrustVC library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -16,7 +16,7 @@
     "clean": "rm -rf dist/",
     "precommit": "lint-staged",
     "prepare": "husky",
-    "release": "semantic-release --parallel=1 --repositoryUrl=https://github.com/TrustVC/trustvc.git --verbose"
+    "release": "semantic-release --parallel=1 --repositoryUrl=https://github.com/nghaninn/trustvc.git --verbose"
   },
   "keywords": [
     "trustvc"
