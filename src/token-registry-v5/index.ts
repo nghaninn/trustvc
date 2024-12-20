@@ -1,4 +1,5 @@
-import { roleHash } from './roleHash';
 import { contractAddress } from './contractAddress';
+import { roleHash } from './roleHash';
 export * from '@tradetrust-tt/token-registry-v5';
-export { roleHash as v5RoleHash, contractAddress as v5ContractAddress };
+export type { TypedContractMethod } from './typedContractMethod';
+export { contractAddress as v5ContractAddress, roleHash as v5RoleHash };
