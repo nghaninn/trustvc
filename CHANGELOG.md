@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/TrustVC/trustvc/compare/v1.1.0...v1.1.1) (2024-12-23)
+
+
+### Bug Fixes
+
+* imports ([#29](https://github.com/TrustVC/trustvc/issues/29)) ([6cb78d5](https://github.com/TrustVC/trustvc/commit/6cb78d5fbb521ab2b514a0da0ad7ed1efd224d74))
+
 ## [1.1.0](https://github.com/TrustVC/trustvc/compare/v1.0.5...v1.1.0) (2024-12-19)
 
 
