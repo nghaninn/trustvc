@@ -2,9 +2,9 @@
   "name": "@trustvc/trustvc",
   "version": "1.1.0",
   "description": "TrustVC library",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -28,84 +28,84 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
-      "require": "./dist/index.js"
+      "require": "./dist/cjs/index.js"
     },
     "./core": {
-      "types": "./dist/core/index.d.ts",
+      "types": "./dist/types/core/index.d.ts",
       "import": "./dist/esm/core/index.js",
-      "require": "./dist/core/index.js"
+      "require": "./dist/cjs/core/index.js"
     },
     "./dnsprove": {
-      "types": "./dist/dnsprove/index.d.ts",
+      "types": "./dist/types/dnsprove/index.d.ts",
       "import": "./dist/esm/dnsprove/index.js",
-      "require": "./dist/dnsprove/index.js"
+      "require": "./dist/cjs/dnsprove/index.js"
     },
     "./open-attestation": {
-      "types": "./dist/open-attestation/index.d.ts",
+      "types": "./dist/types/open-attestation/index.d.ts",
       "import": "./dist/esm/open-attestation/index.js",
-      "require": "./dist/open-attestation/index.js"
+      "require": "./dist/cjs/open-attestation/index.js"
     },
     "./token-registry-v4": {
-      "types": "./dist/token-registry-v4/index.d.ts",
+      "types": "./dist/types/token-registry-v4/index.d.ts",
       "import": "./dist/esm/token-registry-v4/index.js",
-      "require": "./dist/token-registry-v4/index.js"
+      "require": "./dist/cjs/token-registry-v4/index.js"
     },
     "./token-registry-v4/contracts": {
-      "types": "./dist/token-registry-v4/contracts.d.ts",
+      "types": "./dist/types/token-registry-v4/contracts.d.ts",
       "import": "./dist/esm/token-registry-v4/contracts.js",
-      "require": "./dist/token-registry-v4/contracts.js"
+      "require": "./dist/cjs/token-registry-v4/contracts.js"
     },
     "./token-registry-v5": {
-      "types": "./dist/token-registry-v5/index.d.ts",
+      "types": "./dist/types/token-registry-v5/index.d.ts",
       "import": "./dist/esm/token-registry-v5/index.js",
-      "require": "./dist/token-registry-v5/index.js"
+      "require": "./dist/cjs/token-registry-v5/index.js"
     },
     "./token-registry-v5/contracts": {
       "import": "./dist/esm/token-registry-v5/contracts.js",
-      "types": "./dist/token-registry-v5/contracts.d.ts",
-      "require": "./dist/token-registry-v5/contracts.js"
+      "types": "./dist/types/token-registry-v5/contracts.d.ts",
+      "require": "./dist/cjs/token-registry-v5/contracts.js"
     },
     "./utils": {
-      "types": "./dist/utils/index.d.ts",
+      "types": "./dist/types/utils/index.d.ts",
       "import": "./dist/esm/utils/index.js",
-      "require": "./dist/utils/index.js"
+      "require": "./dist/cjs/utils/index.js"
     },
     "./verify": {
-      "types": "./dist/verify/index.d.ts",
+      "types": "./dist/types/verify/index.d.ts",
       "import": "./dist/esm/verify/index.js",
-      "require": "./dist/verify/index.js"
+      "require": "./dist/cjs/verify/index.js"
     },
     "./verify/fragments": {
-      "types": "./dist/verify/fragments.d.ts",
-      "import": "./dist/esm/verify/fragments.js",
-      "require": "./dist/verify/fragments.js"
+      "types": "./dist/types/verify/fragments/index.d.ts",
+      "import": "./dist/esm/verify/fragments/index.js",
+      "require": "./dist/cjs/verify/fragments/index.js"
     },
     "./w3c": {
-      "types": "./dist/w3c/index.d.ts",
+      "types": "./dist/types/w3c/index.d.ts",
       "import": "./dist/esm/w3c/index.js",
-      "require": "./dist/w3c/index.js"
+      "require": "./dist/cjs/w3c/index.js"
     },
     "./w3c/issuer": {
-      "types": "./dist/w3c/issuer/index.d.ts",
+      "types": "./dist/types/w3c/issuer/index.d.ts",
       "import": "./dist/esm/w3c/issuer/index.js",
-      "require": "./dist/w3c/issuer/index.js"
+      "require": "./dist/cjs/w3c/issuer/index.js"
     },
     "./w3c/vc": {
-      "types": "./dist/w3c/vc/index.d.ts",
+      "types": "./dist/types/w3c/vc/index.d.ts",
       "import": "./dist/esm/w3c/vc/index.js",
-      "require": "./dist/w3c/vc/index.js"
+      "require": "./dist/cjs/w3c/vc/index.js"
     },
     "./w3c/context": {
-      "types": "./dist/w3c/context/index.d.ts",
+      "types": "./dist/types/w3c/context/index.d.ts",
       "import": "./dist/esm/w3c/context/index.js",
-      "require": "./dist/w3c/context/index.js"
+      "require": "./dist/cjs/w3c/context/index.js"
     },
     "./w3c/credential-status": {
-      "types": "./dist/w3c/credential-status/index.d.ts",
+      "types": "./dist/types/w3c/credential-status/index.d.ts",
       "import": "./dist/esm/w3c/credential-status/index.js",
-      "require": "./dist/w3c/credential-status/index.js"
+      "require": "./dist/cjs/w3c/credential-status/index.js"
     }
   },
   "dependencies": {
