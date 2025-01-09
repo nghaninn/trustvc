@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/TrustVC/trustvc/compare/v1.1.3...v1.2.0) (2025-01-09)
+
+
+### Features
+
+* add w3cEmptyCredentialStatus fragment ([#33](https://github.com/TrustVC/trustvc/issues/33)) ([76a3098](https://github.com/TrustVC/trustvc/commit/76a3098427cd00dc4102c3850475ce4828adaed2))
+
 ## [1.1.3](https://github.com/TrustVC/trustvc/compare/v1.1.2...v1.1.3) (2025-01-07)
 
 
