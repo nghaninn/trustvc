@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/TrustVC/trustvc/compare/v1.2.1...v1.2.2) (2025-01-28)
+
+
+### Bug Fixes
+
+* upgrade pkgs ([#35](https://github.com/TrustVC/trustvc/issues/35)) ([bf4d412](https://github.com/TrustVC/trustvc/commit/bf4d4129d756bfd3a406688117fa8a60d3bc7cd4))
+
 ## [1.2.1](https://github.com/TrustVC/trustvc/compare/v1.2.0...v1.2.1) (2025-01-09)
 
 
