@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/TrustVC/trustvc/compare/v1.2.3...v1.2.4) (2025-02-05)
+
+
+### Bug Fixes
+
+* upgrade packages ([#37](https://github.com/TrustVC/trustvc/issues/37)) ([35f26c7](https://github.com/TrustVC/trustvc/commit/35f26c71f029a73cb9498c7fb2201d96c19f432e))
+
 ## [1.2.3](https://github.com/TrustVC/trustvc/compare/v1.2.2...v1.2.3) (2025-02-04)
 
 
