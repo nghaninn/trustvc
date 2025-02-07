@@ -16,6 +16,8 @@ import { w3cCredentialStatus } from './document-status/w3cCredentialStatus';
 import { w3cIssuerIdentity } from './issuer-identity/w3cIssuerIdentity';
 import { w3cEmptyCredentialStatus } from './document-status/w3cEmptyCredentialStatus';
 
+export type { TRANSFERABLE_RECORDS_TYPE };
+
 export {
   TRANSFERABLE_RECORDS_TYPE,
   credentialStatusTransferableRecordVerifier,
