@@ -161,7 +161,9 @@
     "vitest": "^1.6.0"
   },
   "overrides": {
-    "ethers": "^5.7.2"
+    "@tradetrust-tt/token-registry-v5": {
+      "ethers": "^5.7.2"
+    }
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "~4.28.0"

@@ -33,9 +33,7 @@ export const fetchEscrowTransfersV5 = async (
   provider: providers.Provider,
   address: string,
 ): Promise<TransferBaseEvent[]> => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const providerOrRunner: any = { provider };
-  const titleEscrowContract = TitleEscrowFactoryV5.connect(address, providerOrRunner);
+  const titleEscrowContract = TitleEscrowFactoryV5.connect(address, provider);
   const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
   return holderChangeLogsDeferred;
 };
