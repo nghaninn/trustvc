@@ -1,6 +1,6 @@
 {
   "name": "@trustvc/trustvc",
-  "version": "1.2.4",
+  "version": "1.2.5-alpha.1",
   "description": "TrustVC library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

@@ -1,3 +1,10 @@
+## [1.2.5-alpha.1](https://github.com/TrustVC/trustvc/compare/v1.2.4...v1.2.5-alpha.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* ethers errors ([#38](https://github.com/TrustVC/trustvc/issues/38)) ([4ca4f77](https://github.com/TrustVC/trustvc/commit/4ca4f775d337ccba51cce6541c13b7e2e4b10ff5))
+
 ## [1.2.4](https://github.com/TrustVC/trustvc/compare/v1.2.3...v1.2.4) (2025-02-05)
 
 
