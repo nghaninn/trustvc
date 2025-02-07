@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/nghaninn/trustvc/compare/v1.1.0...v1.1.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* provider error with v6 ([92c8d6b](https://github.com/nghaninn/trustvc/commit/92c8d6b7cd82aac2bda36d33848a9fc23206688f))
+
 ## [1.1.0](https://github.com/nghaninn/trustvc/compare/v1.0.2...v1.1.0) (2025-02-07)
 
 
