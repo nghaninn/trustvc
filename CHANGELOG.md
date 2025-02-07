@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/nghaninn/trustvc/compare/v1.1.1...v1.1.2) (2025-02-07)
+
+
+### Bug Fixes
+
+* ethers ([85c9480](https://github.com/nghaninn/trustvc/commit/85c94803d4fc4c1a73a7897fd4e42c63ef028b00))
+* override ([7bd6a1a](https://github.com/nghaninn/trustvc/commit/7bd6a1adbbc1383bd1d5ad68e74af061a0512be6))
+* resolve package override ([033d8a7](https://github.com/nghaninn/trustvc/commit/033d8a727062d9c9df728ab4672afd625ca2e8ab))
+
 ## [1.1.1](https://github.com/nghaninn/trustvc/compare/v1.1.0...v1.1.1) (2025-02-07)
 
 
