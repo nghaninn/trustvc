@@ -34,7 +34,7 @@ export const fetchEscrowTransfersV5 = async (
   provider: any,
   address: string,
 ): Promise<TransferBaseEvent[]> => {
-  const titleEscrowContract = TitleEscrowFactoryV5.connect(address, provider);
+  const titleEscrowContract = TitleEscrowFactoryV5.connect(address, { provider });
   const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
   return holderChangeLogsDeferred;
 };
