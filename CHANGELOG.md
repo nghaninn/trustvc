@@ -1,3 +1,10 @@
+## [1.2.5-alpha.2](https://github.com/TrustVC/trustvc/compare/v1.2.5-alpha.1...v1.2.5-alpha.2) (2025-02-07)
+
+
+### Bug Fixes
+
+* imports ([#39](https://github.com/TrustVC/trustvc/issues/39)) ([4d982e7](https://github.com/TrustVC/trustvc/commit/4d982e7296c14c51f0a9ebc24667a3af780ec3eb))
+
 ## [1.2.5-alpha.1](https://github.com/TrustVC/trustvc/compare/v1.2.4...v1.2.5-alpha.1) (2025-02-07)
 
 
