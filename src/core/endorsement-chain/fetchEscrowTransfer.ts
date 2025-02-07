@@ -1,12 +1,12 @@
+import { providers } from 'ethers';
 import {
-  TitleEscrow as TitleEscrowV4,
   TitleEscrow__factory as TitleEscrowFactoryV4,
+  TitleEscrow as TitleEscrowV4,
 } from '../../token-registry-v4/contracts';
 import {
-  TitleEscrow as TitleEscrowV5,
   TitleEscrow__factory as TitleEscrowFactoryV5,
+  TitleEscrow as TitleEscrowV5,
 } from '../../token-registry-v5/contracts';
-import { ethers, providers } from 'ethers';
 import {
   ParsedLog,
   TitleEscrowTransferEvent,
@@ -34,10 +34,7 @@ export const fetchEscrowTransfersV5 = async (
   address: string,
 ): Promise<TransferBaseEvent[]> => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let providerOrRunner: any = provider;
-  if (ethers.version.startsWith('6.')) {
-    providerOrRunner = { provider };
-  }
+  const providerOrRunner: any = { provider };
   const titleEscrowContract = TitleEscrowFactoryV5.connect(address, providerOrRunner);
   const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
   return holderChangeLogsDeferred;
