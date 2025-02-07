@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/nghaninn/trustvc/compare/v1.1.2...v1.1.3) (2025-02-07)
+
+
+### Bug Fixes
+
+* update peerdeps ([5d5c378](https://github.com/nghaninn/trustvc/commit/5d5c37855bdb86c909b161f227130dfca7d9c9ee))
+
 ## [1.1.2](https://github.com/nghaninn/trustvc/compare/v1.1.1...v1.1.2) (2025-02-07)
 
 
