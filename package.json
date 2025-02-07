@@ -166,9 +166,6 @@
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "~4.28.0"
   },
-  "peerDependencies": {
-    "ethers": "^5.7.2"
-  },
   "lint-staged": {
     "*.{js,ts}": [
       "eslint --fix",
