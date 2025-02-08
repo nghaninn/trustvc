@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/nghaninn/trustvc/compare/v1.1.7...v1.1.8) (2025-02-08)
+
+
+### Bug Fixes
+
+* update contract ([2ebb112](https://github.com/nghaninn/trustvc/commit/2ebb112de9a11d1880e3ed18a71872a51cc1900d))
+
 ## [1.1.7](https://github.com/nghaninn/trustvc/compare/v1.1.6...v1.1.7) (2025-02-08)
 
 
