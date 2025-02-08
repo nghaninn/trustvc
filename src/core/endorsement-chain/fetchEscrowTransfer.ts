@@ -8,6 +8,7 @@ import {
   TitleEscrow__factory as TitleEscrowFactoryV5,
   TitleEscrow as TitleEscrowV5,
 } from '../../token-registry-v5/contracts';
+import { getEthersContractFromProvider } from '../../utils/ethers';
 import {
   ParsedLog,
   TitleEscrowTransferEvent,
@@ -15,7 +16,6 @@ import {
   TokenTransferEventType,
   TransferBaseEvent,
 } from '../endorsement-chain/types';
-import { getEthersContractFromProvider } from 'src/utils/ethers';
 
 export const fetchEscrowTransfersV4 = async (
   provider: ethers.providers.Provider | ethersV6.Provider,
