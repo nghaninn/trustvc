@@ -1,4 +1,5 @@
 import { ethers, providers } from 'ethers';
+import { ethers as ethersV6 } from 'ethersV6';
 import {
   TitleEscrow__factory as TitleEscrowFactoryV4,
   TitleEscrow as TitleEscrowV4,
@@ -14,12 +15,19 @@ import {
   TokenTransferEventType,
   TransferBaseEvent,
 } from '../endorsement-chain/types';
+import { getEthersContractFromProvider } from 'src/utils/ethers';
 
 export const fetchEscrowTransfersV4 = async (
-  provider: providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
   address: string,
 ): Promise<TitleEscrowTransferEvent[]> => {
-  const titleEscrowContract = TitleEscrowFactoryV4.connect(address, provider);
+  const Contract = getEthersContractFromProvider(provider);
+  const titleEscrowContract = new Contract(
+    address,
+    TitleEscrowFactoryV4.abi,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    provider as any,
+  ) as TitleEscrowV4;
   const holderChangeLogsDeferred = await fetchHolderTransfers(titleEscrowContract, provider);
   const ownerChangeLogsDeferred = await fetchOwnerTransfers(titleEscrowContract, provider);
   const [holderChangeLogs, ownerChangeLogs] = await Promise.all([
@@ -40,7 +48,7 @@ export const fetchEscrowTransfersV5 = async (
 };
 
 const getParsedLogs = (
-  logs: providers.Log[],
+  logs: ethers.providers.Log[] | ethersV6.Log[],
   titleEscrow: TitleEscrowV4 | TitleEscrowV5,
 ): ParsedLog[] => {
   return logs.map((log) => {
@@ -58,7 +66,7 @@ const getParsedLogs = (
 */
 const fetchOwnerTransfers = async (
   titleEscrowContract: TitleEscrowV4,
-  provider: providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<TitleEscrowTransferEvent[]> => {
   const ownerChangeFilter = titleEscrowContract.filters.BeneficiaryTransfer(null, null);
   const ownerChangeLogs = await provider.getLogs({ ...ownerChangeFilter, fromBlock: 0 });
@@ -78,7 +86,7 @@ const fetchOwnerTransfers = async (
 */
 const fetchHolderTransfers = async (
   titleEscrowContract: TitleEscrowV4,
-  provider: providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<TitleEscrowTransferEvent[]> => {
   const holderChangeFilter = titleEscrowContract.filters.HolderTransfer(null, null);
   const holderChangeLogs = await provider.getLogs({ ...holderChangeFilter, fromBlock: 0 });

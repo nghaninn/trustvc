@@ -1,9 +1,9 @@
 import { ethers } from 'ethers';
 import { ethers as ethersV6 } from 'ethersV6';
-import { isV6EthersProvider } from '../../utils/ethers';
 import { TradeTrustToken__factory } from '../../token-registry-v4/contracts';
 import { supportInterfaceIds as supportInterfaceIdsV4 } from '../../token-registry-v4/supportInterfaceIds';
 import { supportInterfaceIds as supportInterfaceIdsV5 } from '../../token-registry-v5/supportInterfaceIds';
+import { getEthersContractFromProvider } from '../../utils/ethers';
 import { decrypt } from '../decrypt';
 import {
   fetchEscrowTransfersV4,
@@ -44,12 +44,7 @@ export const getTitleEscrowAddress = async (
   tokenId: string,
   provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<string> => {
-  let Contract: typeof ethers.Contract | typeof ethersV6.Contract;
-  if (isV6EthersProvider(provider)) {
-    Contract = ethersV6.Contract;
-  } else {
-    Contract = ethers.Contract;
-  }
+  const Contract = getEthersContractFromProvider(provider);
 
   const tokenRegistryAbi = [
     'function titleEscrowFactory() external view returns (address)',
@@ -88,10 +83,12 @@ const checkSupportsInterface = async (
   provider: ethers.providers.Provider,
 ): Promise<boolean> => {
   try {
+    const Contract = getEthersContractFromProvider(provider);
     const titleEscrowAbi = [
       'function supportsInterface(bytes4 interfaceId) external view returns (bool)',
     ];
-    const titleEscrowContract = new ethers.Contract(titleEscrowAddress, titleEscrowAbi, provider);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const titleEscrowContract = new Contract(titleEscrowAddress, titleEscrowAbi, provider as any);
     return await titleEscrowContract.supportsInterface(interfaceId);
   } catch {
     return false;
