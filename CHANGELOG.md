@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/nghaninn/trustvc/compare/v1.1.5...v1.1.6) (2025-02-08)
+
+
+### Bug Fixes
+
+* fetchEndorsementChain for ethersV6 ([84e244b](https://github.com/nghaninn/trustvc/commit/84e244b449493e4753b05f209f45fc380441c017))
+
 ## [1.1.5](https://github.com/nghaninn/trustvc/compare/v1.1.4...v1.1.5) (2025-02-08)
 
 
