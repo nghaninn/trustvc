@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/nghaninn/trustvc/compare/v1.1.4...v1.1.5) (2025-02-08)
+
+
+### Bug Fixes
+
+* ethersV6 error ([607635c](https://github.com/nghaninn/trustvc/commit/607635c514cf66e46798521bef8fcb6c317388a6))
+
 ## [1.1.4](https://github.com/nghaninn/trustvc/compare/v1.1.3...v1.1.4) (2025-02-08)
 
 
