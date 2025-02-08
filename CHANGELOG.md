@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/nghaninn/trustvc/compare/v1.1.6...v1.1.7) (2025-02-08)
+
+
+### Bug Fixes
+
+* import ([fa7d070](https://github.com/nghaninn/trustvc/commit/fa7d070b9cf3f980b0a59cd68ced6ec5a60c493a))
+
 ## [1.1.6](https://github.com/nghaninn/trustvc/compare/v1.1.5...v1.1.6) (2025-02-08)
 
 
