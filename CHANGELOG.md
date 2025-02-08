@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/nghaninn/trustvc/compare/v1.1.3...v1.1.4) (2025-02-08)
+
+
+### Bug Fixes
+
+* update endorsement chain ([235976a](https://github.com/nghaninn/trustvc/commit/235976adbf2fc813dfaa30031c7a9ea066a3ab2b))
+
 ## [1.1.3](https://github.com/nghaninn/trustvc/compare/v1.1.2...v1.1.3) (2025-02-07)
 
 
