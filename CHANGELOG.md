@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/nghaninn/trustvc/compare/v1.1.8...v1.1.9) (2025-02-08)
+
+
+### Bug Fixes
+
+* provider ([3d0611e](https://github.com/nghaninn/trustvc/commit/3d0611e68f88218fe7aca88abd575b9824e43276))
+
 ## [1.1.8](https://github.com/nghaninn/trustvc/compare/v1.1.7...v1.1.8) (2025-02-08)
 
 
