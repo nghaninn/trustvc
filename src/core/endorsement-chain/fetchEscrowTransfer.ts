@@ -1,4 +1,4 @@
-import { providers } from 'ethers';
+import { ethers, providers } from 'ethers';
 import {
   TitleEscrow__factory as TitleEscrowFactoryV4,
   TitleEscrow as TitleEscrowV4,
@@ -33,7 +33,8 @@ export const fetchEscrowTransfersV5 = async (
   provider: providers.Provider,
   address: string,
 ): Promise<TransferBaseEvent[]> => {
-  const titleEscrowContract = TitleEscrowFactoryV5.connect(address, provider);
+  // Convert TitleEscrowFactoryV5 to Contract to make it compatible with ethers v5
+  const titleEscrowContract = new ethers.Contract(address, TitleEscrowFactoryV5.abi, provider);
   const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
   return holderChangeLogsDeferred;
 };
@@ -91,11 +92,13 @@ const fetchHolderTransfers = async (
   }));
 };
 
-/*
-  Retrieve all V5 events
-*/
+/**
+ * Retrieve all V5 events
+ * @param {TitleEscrowV5} titleEscrowContract - Contract; Updated type to Contract to make it competible with ethers v5
+ * @returns {Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]>} - Array of events
+ */
 const fetchAllTransfers = async (
-  titleEscrowContract: TitleEscrowV5,
+  titleEscrowContract: ethers.Contract,
 ): Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]> => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allFilters: any[] = [
@@ -117,7 +120,10 @@ const fetchAllTransfers = async (
     }),
   );
 
-  const holderChangeLogsParsed = getParsedLogs(allLogs.flat(), titleEscrowContract);
+  const holderChangeLogsParsed = getParsedLogs(
+    allLogs.flat(),
+    titleEscrowContract as unknown as TitleEscrowV5,
+  );
 
   const tokenRegistryAddress: string = await titleEscrowContract.registry();
 
