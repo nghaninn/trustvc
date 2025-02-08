@@ -41,8 +41,14 @@ export const fetchEscrowTransfersV5 = async (
   provider: providers.Provider,
   address: string,
 ): Promise<TransferBaseEvent[]> => {
+  const Contract = getEthersContractFromProvider(provider);
   // Convert TitleEscrowFactoryV5 to Contract to make it compatible with ethers v5
-  const titleEscrowContract = new ethers.Contract(address, TitleEscrowFactoryV5.abi, provider);
+  const titleEscrowContract = new Contract(
+    address,
+    TitleEscrowFactoryV5.abi,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    provider as any,
+  );
   const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
   return holderChangeLogsDeferred;
 };
@@ -106,7 +112,7 @@ const fetchHolderTransfers = async (
  * @returns {Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]>} - Array of events
  */
 const fetchAllTransfers = async (
-  titleEscrowContract: ethers.Contract,
+  titleEscrowContract: ethers.Contract | ethersV6.Contract,
 ): Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]> => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allFilters: any[] = [
