@@ -1,4 +1,4 @@
-import { ethers, providers } from 'ethers';
+import { ethers } from 'ethers';
 import { ethers as ethersV6 } from 'ethersV6';
 import {
   TitleEscrow__factory as TitleEscrowFactoryV4,
@@ -28,6 +28,7 @@ export const fetchEscrowTransfersV4 = async (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     provider as any,
   ) as TitleEscrowV4;
+
   const holderChangeLogsDeferred = await fetchHolderTransfers(titleEscrowContract, provider);
   const ownerChangeLogsDeferred = await fetchOwnerTransfers(titleEscrowContract, provider);
   const [holderChangeLogs, ownerChangeLogs] = await Promise.all([
@@ -38,7 +39,7 @@ export const fetchEscrowTransfersV4 = async (
 };
 
 export const fetchEscrowTransfersV5 = async (
-  provider: providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
   address: string,
 ): Promise<TransferBaseEvent[]> => {
   const Contract = getEthersContractFromProvider(provider);

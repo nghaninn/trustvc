@@ -1,6 +1,5 @@
 import { ethers } from 'ethers';
 import { ethers as ethersV6 } from 'ethersV6';
-import { TradeTrustToken__factory } from '../../token-registry-v4/contracts';
 import { supportInterfaceIds as supportInterfaceIdsV4 } from '../../token-registry-v4/supportInterfaceIds';
 import { supportInterfaceIds as supportInterfaceIdsV5 } from '../../token-registry-v5/supportInterfaceIds';
 import { getEthersContractFromProvider } from '../../utils/ethers';
@@ -80,7 +79,7 @@ export const getTitleEscrowAddress = async (
 const checkSupportsInterface = async (
   titleEscrowAddress: string,
   interfaceId: string,
-  provider: ethers.providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<boolean> => {
   try {
     const Contract = getEthersContractFromProvider(provider);
@@ -99,7 +98,7 @@ export const isTitleEscrowVersion = async (
   versionInterface: string,
   tokenRegistryAddress: string,
   tokenId: string,
-  provider: ethers.providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<boolean> => {
   try {
     const titleEscrowAddress = await getTitleEscrowAddress(tokenRegistryAddress, tokenId, provider);
@@ -110,31 +109,30 @@ export const isTitleEscrowVersion = async (
 };
 
 export const fetchEndorsementChain = async (
-  tokenRegistry: string,
+  tokenRegistryAddress: string,
   tokenId: string,
-  provider: ethers.providers.Provider,
+  provider: ethers.providers.Provider | ethersV6.Provider,
   keyId?: string,
 ): Promise<EndorsementChain> => {
-  if (!tokenRegistry || !tokenId || !provider) {
+  if (!tokenRegistryAddress || !tokenId || !provider) {
     throw new Error('Missing required dependencies');
   }
 
   const [isV4, isV5] = await Promise.all([
-    isTitleEscrowVersion(TitleEscrowInterface.V4, tokenRegistry, tokenId, provider),
-    isTitleEscrowVersion(TitleEscrowInterface.V5, tokenRegistry, tokenId, provider),
+    isTitleEscrowVersion(TitleEscrowInterface.V4, tokenRegistryAddress, tokenId, provider),
+    isTitleEscrowVersion(TitleEscrowInterface.V5, tokenRegistryAddress, tokenId, provider),
   ]);
 
   if (!isV4 && !isV5) {
     throw new Error('Only Token Registry V4/V5 is supported');
   }
 
-  const titleEscrowAddress = await getTitleEscrowAddress(tokenRegistry, tokenId, provider);
+  const titleEscrowAddress = await getTitleEscrowAddress(tokenRegistryAddress, tokenId, provider);
   let transferEvents: TransferBaseEvent[] = [];
 
   if (isV4) {
-    const tokenRegistryContract = TradeTrustToken__factory.connect(tokenRegistry, provider);
     const [tokenLogs, titleEscrowLogs] = await Promise.all([
-      fetchTokenTransfers(tokenRegistryContract, tokenId),
+      fetchTokenTransfers(provider, tokenRegistryAddress, tokenId),
       fetchEscrowTransfersV4(provider, titleEscrowAddress),
     ]);
 
