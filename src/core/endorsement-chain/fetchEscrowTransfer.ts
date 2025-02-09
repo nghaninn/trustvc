@@ -29,8 +29,8 @@ export const fetchEscrowTransfersV4 = async (
     provider as any,
   ) as TitleEscrowV4;
 
-  const holderChangeLogsDeferred = await fetchHolderTransfers(titleEscrowContract, provider);
-  const ownerChangeLogsDeferred = await fetchOwnerTransfers(titleEscrowContract, provider);
+  const holderChangeLogsDeferred = fetchHolderTransfers(titleEscrowContract);
+  const ownerChangeLogsDeferred = fetchOwnerTransfers(titleEscrowContract);
   const [holderChangeLogs, ownerChangeLogs] = await Promise.all([
     holderChangeLogsDeferred,
     ownerChangeLogsDeferred,
@@ -40,17 +40,21 @@ export const fetchEscrowTransfersV4 = async (
 
 export const fetchEscrowTransfersV5 = async (
   provider: ethers.providers.Provider | ethersV6.Provider,
-  address: string,
+  titleEscrowAddress: string,
+  tokenRegistryAddress?: string,
 ): Promise<TransferBaseEvent[]> => {
   const Contract = getEthersContractFromProvider(provider);
-  // Convert TitleEscrowFactoryV5 to Contract to make it compatible with ethers v5
   const titleEscrowContract = new Contract(
-    address,
+    titleEscrowAddress,
     TitleEscrowFactoryV5.abi,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     provider as any,
   );
-  const holderChangeLogsDeferred = await fetchAllTransfers(titleEscrowContract);
+  const holderChangeLogsDeferred = await fetchAllTransfers(
+    titleEscrowContract,
+    titleEscrowAddress,
+    tokenRegistryAddress,
+  );
   return holderChangeLogsDeferred;
 };
 
@@ -73,10 +77,9 @@ const getParsedLogs = (
 */
 const fetchOwnerTransfers = async (
   titleEscrowContract: TitleEscrowV4,
-  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<TitleEscrowTransferEvent[]> => {
   const ownerChangeFilter = titleEscrowContract.filters.BeneficiaryTransfer(null, null);
-  const ownerChangeLogs = await provider.getLogs({ ...ownerChangeFilter, fromBlock: 0 });
+  const ownerChangeLogs = await titleEscrowContract.queryFilter(ownerChangeFilter, 0, 'latest');
 
   const ownerChangeLogsParsed = getParsedLogs(ownerChangeLogs, titleEscrowContract);
   return ownerChangeLogsParsed.map((event) => ({
@@ -93,10 +96,9 @@ const fetchOwnerTransfers = async (
 */
 const fetchHolderTransfers = async (
   titleEscrowContract: TitleEscrowV4,
-  provider: ethers.providers.Provider | ethersV6.Provider,
 ): Promise<TitleEscrowTransferEvent[]> => {
   const holderChangeFilter = titleEscrowContract.filters.HolderTransfer(null, null);
-  const holderChangeLogs = await provider.getLogs({ ...holderChangeFilter, fromBlock: 0 });
+  const holderChangeLogs = await titleEscrowContract.queryFilter(holderChangeFilter, 0, 'latest');
   const holderChangeLogsParsed = getParsedLogs(holderChangeLogs, titleEscrowContract);
   return holderChangeLogsParsed.map((event) => ({
     type: 'TRANSFER_HOLDER',
@@ -110,10 +112,14 @@ const fetchHolderTransfers = async (
 /**
  * Retrieve all V5 events
  * @param {TitleEscrowV5} titleEscrowContract - Contract; Updated type to Contract to make it competible with ethers v5
+ * @param {string} titleEscrowAddress - Title escrow address
+ * @param {string} tokenRegistryAddress - Token registry address
  * @returns {Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]>} - Array of events
  */
 const fetchAllTransfers = async (
   titleEscrowContract: ethers.Contract | ethersV6.Contract,
+  titleEscrowAddress?: string,
+  tokenRegistryAddress?: string,
 ): Promise<(TitleEscrowTransferEvent | TokenTransferEvent)[]> => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allFilters: any[] = [
@@ -140,7 +146,13 @@ const fetchAllTransfers = async (
     titleEscrowContract as unknown as TitleEscrowV5,
   );
 
-  const tokenRegistryAddress: string = await titleEscrowContract.registry();
+  if (!tokenRegistryAddress) {
+    tokenRegistryAddress = await titleEscrowContract.registry();
+  }
+  if (!titleEscrowAddress) {
+    // Handle ethers v5 and v6 differently
+    titleEscrowAddress = titleEscrowContract?.address ?? (await titleEscrowContract.getAddress());
+  }
 
   return holderChangeLogsParsed
     .map((event) => {
@@ -171,7 +183,7 @@ const fetchAllTransfers = async (
             type === 'INITIAL'
               ? '0x0000000000000000000000000000000000000000'
               : tokenRegistryAddress,
-          to: titleEscrowContract.address,
+          to: titleEscrowAddress,
           blockNumber: event.blockNumber,
           transactionHash: event.transactionHash,
           transactionIndex: event.transactionIndex,
@@ -181,7 +193,8 @@ const fetchAllTransfers = async (
         return {
           type: 'RETURNED_TO_ISSUER',
           blockNumber: event.blockNumber,
-          from: titleEscrowContract.address,
+          // Handle ethers v5 and v6 differently
+          from: titleEscrowAddress,
           to: tokenRegistryAddress,
           transactionHash: event.transactionHash,
           transactionIndex: event.transactionIndex,
