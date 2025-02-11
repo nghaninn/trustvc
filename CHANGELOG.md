@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/TrustVC/trustvc/compare/v1.2.4...v1.2.5) (2025-02-11)
+
+
+### Bug Fixes
+
+* ethers error ([#40](https://github.com/TrustVC/trustvc/issues/40)) ([f41bebc](https://github.com/TrustVC/trustvc/commit/f41bebc1604e693ec72a727fa587332ee7c0e522))
+
 ## [1.2.4](https://github.com/TrustVC/trustvc/compare/v1.2.3...v1.2.4) (2025-02-05)
 
 
