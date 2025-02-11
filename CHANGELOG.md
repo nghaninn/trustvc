@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/nghaninn/trustvc/compare/v1.1.10...v1.1.11) (2025-02-11)
+
+
+### Bug Fixes
+
+* update test ([49bfbb6](https://github.com/nghaninn/trustvc/commit/49bfbb6da787b8fd0f7bda4d38b4110d8081eedd))
+
 ## [1.1.10](https://github.com/nghaninn/trustvc/compare/v1.1.9...v1.1.10) (2025-02-10)
 
 
