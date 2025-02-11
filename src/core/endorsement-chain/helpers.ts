@@ -1,10 +1,14 @@
-import { Provider } from '@ethersproject/abstract-provider';
+import { ethers } from 'ethers';
+import { ethers as ethersV6 } from 'ethersV6';
 import { Dictionary, groupBy } from 'lodash';
 import { TransferBaseEvent, TransferEventType } from '../endorsement-chain/types';
 
-export const fetchEventTime = async (blockNumber: number, provider: Provider): Promise<number> => {
+export const fetchEventTime = async (
+  blockNumber: number,
+  provider: ethers.providers.Provider | ethersV6.Provider,
+): Promise<number> => {
   const msecToSec = 1000;
-  const eventTimestamp = (await provider.getBlock(blockNumber)).timestamp * msecToSec;
+  const eventTimestamp = (await provider.getBlock(blockNumber))!.timestamp * msecToSec;
   return eventTimestamp;
 };
 
