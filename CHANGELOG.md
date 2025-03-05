@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/TrustVC/trustvc/compare/v1.2.7...v1.2.8) (2025-03-05)
+
+
+### Bug Fixes
+
+* supports web3provider for endorsement chain ([#43](https://github.com/TrustVC/trustvc/issues/43)) ([2559f44](https://github.com/TrustVC/trustvc/commit/2559f44f1e432fd6c1784c87dfae00d5bc18e1e0))
+
 ## [1.2.7](https://github.com/TrustVC/trustvc/compare/v1.2.6...v1.2.7) (2025-02-12)
 
 
