@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/TrustVC/trustvc/compare/v1.2.9...v1.2.10) (2025-03-13)
+
+
+### Bug Fixes
+
+* update exports ([#45](https://github.com/TrustVC/trustvc/issues/45)) ([bf1e165](https://github.com/TrustVC/trustvc/commit/bf1e165e275bb256046e19a5c6796c773856ce37))
+
 ## [1.2.9](https://github.com/TrustVC/trustvc/compare/v1.2.8...v1.2.9) (2025-03-13)
 
 
