@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/TrustVC/trustvc/compare/v1.2.8...v1.2.9) (2025-03-13)
+
+
+### Bug Fixes
+
+* update tradetrust utils ([#44](https://github.com/TrustVC/trustvc/issues/44)) ([3058c16](https://github.com/TrustVC/trustvc/commit/3058c16df61047f6ef721533a237769c588a7557))
+
 ## [1.2.8](https://github.com/TrustVC/trustvc/compare/v1.2.7...v1.2.8) (2025-03-05)
 
 
