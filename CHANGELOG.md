@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/TrustVC/trustvc/compare/v1.2.11...v1.3.0) (2025-03-27)
+
+
+### Features
+
+* document builder for w3c vc ([#47](https://github.com/TrustVC/trustvc/issues/47)) ([fab9c82](https://github.com/TrustVC/trustvc/commit/fab9c8237a072f541474fa778cf9974de6c0769c))
+
 ## [1.2.11](https://github.com/TrustVC/trustvc/compare/v1.2.10...v1.2.11) (2025-03-17)
 
 
