@@ -24,6 +24,7 @@ TrustVC is a comprehensive wrapper library designed to simplify the signing and 
       - [TradeTrustToken](#tradetrusttoken)
       - [a) Token Registry v4](#a-token-registry-v4)
       - [b) Token Registry V5](#b-token-registry-v5)
+    - [7. **Document Builder**](#7-document-builder)
 
 ## Installation
 
@@ -587,3 +588,155 @@ function rejectTransferOwners(bytes calldata _remark) external;
 ```
 
 For more information on Token Registry and Title Escrow contracts **version v5**, please visit the readme of [TradeTrust Token Registry V5](https://github.com/TradeTrust/token-registry/blob/master/README.md)
+
+### 7. **Document Builder**
+> The `DocumentBuilder` class helps build and manage W3C Verifiable Credentials (VCs) with credential status features. It supports creating documents with two types of credential statuses: `transferableRecords` and `verifiableDocument`. It can sign the document using a private key, verify its signature, and serialize the document to a JSON format. Additionally, it allows for configuration of document rendering methods and expiration dates.
+
+#### Usage
+
+##### Create a new DocumentBuilder instance
+To create a new document, instantiate the `DocumentBuilder` with the base document (Verifiable Credential) that you want to build.
+
+To learn more about defining custom contexts, check out the [Credential Subject - Custom Contexts guide](https://docs.tradetrust.io/docs/how-tos/credential-subject).
+
+```ts
+// Adds a custom vocabulary used to define terms in the `credentialSubject`.
+// Users can define their own context if they have domain-specific fields or custom data structures.
+const builder = new DocumentBuilder({
+  '@context': 'https://w3c-ccg.github.io/citizenship-vocab/contexts/citizenship-v1.jsonld'
+});
+```
+
+##### Set Credential Subject
+Set the subject of the Verifiable Credential, which typically contains information about the entity the credential is issued to.
+
+```ts
+builder.credentialSubject({
+  id: 'did:example:123',
+  name: 'John Doe',
+});
+```
+
+##### Configure Credential Status
+You can configure the credential status as either `transferableRecords` or `verifiableDocument`.
+
+**Transferable Records**
+```ts
+builder.credentialStatus({
+  // Refers to the supported network.
+  // See: https://docs.tradetrust.io/docs/introduction/key-components-of-tradetrust/blockchain/supported-network
+  chain: 'Ethereum',
+  chainId: 1,
+  tokenRegistry: '0x1234567890abcdef...',
+  rpcProviderUrl: 'https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID',
+});
+```
+
+> ⚠️ **Disclaimer:**  
+> This builder **does not mint** documents on-chain. If you're using `transferableRecords`, you'll need to mint the document.  
+> [See the minting guide here](https://docs.tradetrust.io/docs/how-tos/credential-status#2-minting-the-credential)
+
+
+**Verifiable Document**
+```ts
+builder.credentialStatus({
+  url: 'https://example.com/status-list',
+  // `index: <placeholder>` refers to the bit position in the status list that will be set for revocation.
+  // Note: A document with the specific index must be marked as not revoked in the status list.
+  index: <placeholder>,
+  purpose: 'revocation',
+});
+```
+
+##### Set Expiration Date
+You can set an expiration date for the document.
+
+```ts
+builder.expirationDate('2026-01-01T00:00:00Z');
+```
+
+##### Define Rendering Method
+Set the rendering method to be used for the document.
+
+```ts
+builder.renderMethod({
+  id: 'https://example.com/rendering-method',
+  type: 'EMBEDDED_RENDERER',
+  templateName: 'BILL_OF_LADING',
+});
+```
+
+##### Sign the Document
+To sign the document, provide a `PrivateKeyPair` from `@trustvc/trustvc`.
+
+```ts
+const privateKey: PrivateKeyPair = {
+  id: 'did:example:456#key1',
+  controller: 'did:example:456',
+  type: VerificationType.Bls12381G2Key2020,
+  publicKeyBase58: 'your-public-key-base58',
+  privateKeyBase58: 'your-private-key-base58',
+};
+
+const signedDocument = await builder.sign(privateKey);
+console.log(signedDocument);
+```
+
+Example Output After Signing
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3c-ccg.github.io/citizenship-vocab/contexts/citizenship-v1.jsonld",
+    "https://w3id.org/vc/status-list/2021/v1",
+    "https://trustvc.io/context/render-method-context.json",
+    "https://w3id.org/security/bbs/v1"
+  ],
+  "type": ["VerifiableCredential"],
+  "credentialSubject": {
+    "id": "did:example:123",
+    "name": "John Doe"
+  },
+  "expirationDate": "2026-01-01T00:00:00Z",
+  "renderMethod": [
+    {
+      "id": "https://example.com/rendering-method",
+      "type": "EMBEDDED_RENDERER",
+      "templateName": "BILL_OF_LADING"
+    }
+  ],
+  "credentialStatus": {
+    "id": "https://example.com/status-list#<placeholder>",
+    "type": "StatusList2021Entry",
+    "statusPurpose": "revocation",
+    "statusListIndex": "<placeholder>",
+    "statusListCredential": "https://example.com/status-list"
+  },
+  "issuer": "did:example:456",
+  "issuanceDate": "2025-01-01T00:00:00Z",
+  "id": "urn:bnid:_:0195fec2-4ae1-7cca-9182-03fd7da5142b",
+  "proof": {
+    "type": "BbsBlsSignature2020",
+    "created": "2025-01-01T00:00:01Z",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "rV56L+QYozATRy3GOVLomzUo99sXtw2x0Cy9dEkHJ15wi4cS12cQJRIwzONVi3YscdhaSKoqD1jWmwb5A/khLZnDq5eo3QzDgTVClYuV86opL3HJyoS4+t2rRt3wl+chnATy2jqr5zMEvcVJ3gdXpQ==",
+    "verificationMethod": "did:example:456#key1"
+  }
+}
+```
+
+##### Verify the Document
+To verify the signature of the signed document:
+
+```ts
+const isVerified = await builder.verify();
+console.log(isVerified); // true or false
+```
+
+##### Convert Document to JSON String
+To get the current state of the document as a JSON string:
+
+```ts
+const documentJson = builder.toString();
+console.log(documentJson);
+```
