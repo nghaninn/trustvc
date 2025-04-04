@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/TrustVC/trustvc/compare/v1.3.0...v1.4.0) (2025-04-04)
+
+
+### Features
+
+* document builder update ([#50](https://github.com/TrustVC/trustvc/issues/50)) ([a6e2e46](https://github.com/TrustVC/trustvc/commit/a6e2e4617773e3d426d5429f48f1dce8938b2270))
+
 ## [1.3.0](https://github.com/TrustVC/trustvc/compare/v1.2.11...v1.3.0) (2025-03-27)
 
 
