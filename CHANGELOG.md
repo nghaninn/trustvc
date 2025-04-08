@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/TrustVC/trustvc/compare/v1.4.1...v1.4.2) (2025-04-08)
+
+
+### Bug Fixes
+
+* add getDocumentOwner ([#52](https://github.com/TrustVC/trustvc/issues/52)) ([ac37a05](https://github.com/TrustVC/trustvc/commit/ac37a053f381128cd180b2d11adfd38c3f24014c))
+
 ## [1.4.1](https://github.com/TrustVC/trustvc/compare/v1.4.0...v1.4.1) (2025-04-08)
 
 
