@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/TrustVC/trustvc/compare/v1.4.0...v1.4.1) (2025-04-08)
+
+
+### Bug Fixes
+
+* upgrade package and update getTitleEscrowAddress ([#51](https://github.com/TrustVC/trustvc/issues/51)) ([f0693a1](https://github.com/TrustVC/trustvc/commit/f0693a14d1bcea22d50ab904d45bbf1151c1ceb8))
+
 ## [1.4.0](https://github.com/TrustVC/trustvc/compare/v1.3.0...v1.4.0) (2025-04-04)
 
 
