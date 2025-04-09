@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/TrustVC/trustvc/compare/v1.4.2...v1.4.3) (2025-04-09)
+
+
+### Bug Fixes
+
+* allow getDocumentLoader for verifyDocument ([#53](https://github.com/TrustVC/trustvc/issues/53)) ([8a4afc4](https://github.com/TrustVC/trustvc/commit/8a4afc44bcf3ca45a9bc82d7a6838e7df432200c))
+
 ## [1.4.2](https://github.com/TrustVC/trustvc/compare/v1.4.1...v1.4.2) (2025-04-08)
 
 
