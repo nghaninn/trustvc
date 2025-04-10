@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/TrustVC/trustvc/compare/v1.4.4...v1.4.5) (2025-04-10)
+
+
+### Bug Fixes
+
+* prevent comments from being removed, for jsdocs ([#55](https://github.com/TrustVC/trustvc/issues/55)) ([82a4208](https://github.com/TrustVC/trustvc/commit/82a4208b38487c5c54093e65f0726cc14efcd308))
+
 ## [1.4.4](https://github.com/TrustVC/trustvc/compare/v1.4.3...v1.4.4) (2025-04-10)
 
 
