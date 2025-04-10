@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/TrustVC/trustvc/compare/v1.4.3...v1.4.4) (2025-04-10)
+
+
+### Bug Fixes
+
+* update w3cIssuerIdentity to use documentLoader ([#54](https://github.com/TrustVC/trustvc/issues/54)) ([8477bfc](https://github.com/TrustVC/trustvc/commit/8477bfc48214523de057cc9d047abe15886e1321))
+
 ## [1.4.3](https://github.com/TrustVC/trustvc/compare/v1.4.2...v1.4.3) (2025-04-09)
 
 
