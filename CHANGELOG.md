@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/TrustVC/trustvc/compare/v1.4.6...v1.4.7) (2025-04-22)
+
+
+### Bug Fixes
+
+* update checkDidWebResolve function to use queryDidDocument ([#57](https://github.com/TrustVC/trustvc/issues/57)) ([da975ed](https://github.com/TrustVC/trustvc/commit/da975eda1475390ed41a72926b24308c1fb59c6c))
+
 ## [1.4.6](https://github.com/TrustVC/trustvc/compare/v1.4.5...v1.4.6) (2025-04-22)
 
 
