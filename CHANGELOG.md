@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/TrustVC/trustvc/compare/v1.4.5...v1.4.6) (2025-04-22)
+
+
+### Bug Fixes
+
+* endorsement chain initial event remarks error ([#56](https://github.com/TrustVC/trustvc/issues/56)) ([1fd5b4c](https://github.com/TrustVC/trustvc/commit/1fd5b4c1e2794e5cd6748c26ab73f4099b110ffd))
+
 ## [1.4.5](https://github.com/TrustVC/trustvc/compare/v1.4.4...v1.4.5) (2025-04-10)
 
 
