@@ -1,3 +1,15 @@
+## [1.4.8](https://github.com/TrustVC/trustvc/compare/v1.4.7...v1.4.8) (2025-05-14)
+
+
+### Bug Fixes
+
+* add qrcode functionality to document builder ([#59](https://github.com/TrustVC/trustvc/issues/59)) ([b217e85](https://github.com/TrustVC/trustvc/commit/b217e85e45a2879800cbf44b1de01d9f5f20ebce))
+
+
+### Miscellaneous Chores
+
+* add astrontestnet testcase ([#58](https://github.com/TrustVC/trustvc/issues/58)) ([48e82cb](https://github.com/TrustVC/trustvc/commit/48e82cbb62c6188e8dda86e35d431b308647a03c))
+
 ## [1.4.7](https://github.com/TrustVC/trustvc/compare/v1.4.6...v1.4.7) (2025-04-22)
 
 
