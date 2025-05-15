@@ -1,3 +1,15 @@
+## [1.4.9](https://github.com/TrustVC/trustvc/compare/v1.4.8...v1.4.9) (2025-05-15)
+
+
+### Bug Fixes
+
+* version bump ([#61](https://github.com/TrustVC/trustvc/issues/61)) ([92c7b0b](https://github.com/TrustVC/trustvc/commit/92c7b0ba2d72fc11e16cd6c2f8d7883e83f73d9e))
+
+
+### Miscellaneous Chores
+
+* export gas station function from tt-utils ([#60](https://github.com/TrustVC/trustvc/issues/60)) ([5e88b9c](https://github.com/TrustVC/trustvc/commit/5e88b9cde81068a7ca183a1498bd284f928a092a))
+
 ## [1.4.8](https://github.com/TrustVC/trustvc/compare/v1.4.7...v1.4.8) (2025-05-14)
 
 
