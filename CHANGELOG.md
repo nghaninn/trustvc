@@ -1,3 +1,11 @@
+## [1.4.10](https://github.com/TrustVC/trustvc/compare/v1.4.9...v1.4.10) (2025-05-21)
+
+
+### Bug Fixes
+
+* update amoy rpc for test case ([#63](https://github.com/TrustVC/trustvc/issues/63)) ([9ddba30](https://github.com/TrustVC/trustvc/commit/9ddba300f4f240d9ec2508528bee791e481d8c04))
+* update package ([#62](https://github.com/TrustVC/trustvc/issues/62)) ([f4f3942](https://github.com/TrustVC/trustvc/commit/f4f3942e84325e69c37e652002fa41e970a09ad0))
+
 ## [1.4.9](https://github.com/TrustVC/trustvc/compare/v1.4.8...v1.4.9) (2025-05-15)
 
 
