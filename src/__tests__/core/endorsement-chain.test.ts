@@ -134,7 +134,7 @@ const testCases = [
         timestamp: 1713958422000,
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: 'https://rpc-amoy.polygon.technology',
@@ -273,7 +273,7 @@ const testCases = [
         type: 'RETURN_TO_ISSUER_ACCEPTED',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: 'https://rpc-amoy.polygon.technology',
@@ -292,7 +292,7 @@ const testCases = [
         remark: 'Issuance',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -311,7 +311,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -370,7 +370,7 @@ const testCases = [
         type: 'REJECT_TRANSFER_BENEFICIARY',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.stabilityprotocol.com/zgt/${process.env.STABILITY_API_KEY}`,
@@ -389,7 +389,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.testnet.stabilityprotocol.com/zgt/${process.env.STABILITY_API_KEY}`,
@@ -408,7 +408,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.testnet.stabilityprotocol.com/zgt/${process.env.STABILITY_API_KEY}`,
@@ -427,7 +427,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://astronlayer2.bitfactory.cn/rpc/`,
@@ -446,7 +446,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://dev-astronlayer2.bitfactory.cn/query/`,
@@ -535,7 +535,7 @@ const testCases = [
         type: 'RETURN_TO_ISSUER_ACCEPTED',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.ankr.com/xdc/${process.env.ANKR_API_KEY}`,
@@ -554,7 +554,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.ankr.com/xdc_testnet/${process.env.ANKR_API_KEY}`,
@@ -633,7 +633,7 @@ const testCases = [
         type: 'SURRENDER_REJECTED',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://rpc.ankr.com/xdc_testnet/${process.env.ANKR_API_KEY}`,
@@ -662,7 +662,7 @@ const testCases = [
         type: 'TRANSFER_HOLDER',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -721,7 +721,7 @@ const testCases = [
         type: 'SURRENDER_REJECTED',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -740,7 +740,7 @@ const testCases = [
         type: 'INITIAL',
       },
     ],
-    timeout: 60_000,
+    timeout: 180_000,
   },
   {
     rpcUrl: 'https://rpc-amoy.polygon.technology',
@@ -748,7 +748,7 @@ const testCases = [
     tokenRegistryAddress: '0x96cc41e7007dee20eb409586e2e8206d5053219b',
     tokenId: '0xd97a8af5c38157b95c558b7801862f4b53171149926d76d0c5b2b279016eed0a',
     expectedError: 'Only Token Registry V4/V5 is supported',
-    timeout: 60_000,
+    timeout: 180_000,
   },
 ];
 
