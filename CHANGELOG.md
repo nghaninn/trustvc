@@ -1,3 +1,10 @@
+## [1.4.11](https://github.com/TrustVC/trustvc/compare/v1.4.10...v1.4.11) (2025-05-29)
+
+
+### Bug Fixes
+
+* update tt utils version ([#64](https://github.com/TrustVC/trustvc/issues/64)) ([86ff7fc](https://github.com/TrustVC/trustvc/commit/86ff7fc9ac7b7d43e3e5851a0eecd94e1a5e4e15))
+
 ## [1.4.10](https://github.com/TrustVC/trustvc/compare/v1.4.9...v1.4.10) (2025-05-21)
 
 
