@@ -1,3 +1,10 @@
+## [1.4.12](https://github.com/TrustVC/trustvc/compare/v1.4.11...v1.4.12) (2025-05-30)
+
+
+### Bug Fixes
+
+* resolve import and add provider ([#65](https://github.com/TrustVC/trustvc/issues/65)) ([6b3dae3](https://github.com/TrustVC/trustvc/commit/6b3dae3a630edb5a259b04a3bc5f39ac3a9a4fa4))
+
 ## [1.4.11](https://github.com/TrustVC/trustvc/compare/v1.4.10...v1.4.11) (2025-05-29)
 
 
