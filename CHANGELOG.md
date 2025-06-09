@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/TrustVC/trustvc/compare/v1.5.0...v1.5.1) (2025-06-09)
+
+
+### Bug Fixes
+
+* expose contracts ([#69](https://github.com/TrustVC/trustvc/issues/69)) ([c4e191d](https://github.com/TrustVC/trustvc/commit/c4e191de42d2a53430cd8d44896b3b6ad7a8a0c5))
+
 ## [1.5.0](https://github.com/TrustVC/trustvc/compare/v1.4.12...v1.5.0) (2025-06-09)
 
 
