@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/TrustVC/trustvc/compare/v1.4.12...v1.5.0) (2025-06-09)
+
+
+### Features
+
+* add aws kms signer ([#68](https://github.com/TrustVC/trustvc/issues/68)) ([975f82e](https://github.com/TrustVC/trustvc/commit/975f82e19ea1376f9a3b1bd77ca44cf843adbecd))
+
 ## [1.4.12](https://github.com/TrustVC/trustvc/compare/v1.4.11...v1.4.12) (2025-05-30)
 
 
