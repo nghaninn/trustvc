@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/TrustVC/trustvc/compare/v1.5.1...v1.5.2) (2025-06-10)
+
+
+### Bug Fixes
+
+* useEndorsementChain fetch log error ([#70](https://github.com/TrustVC/trustvc/issues/70)) ([3d9871a](https://github.com/TrustVC/trustvc/commit/3d9871a601b05beab88f79814c9b1b4fca4b4145))
+
 ## [1.5.1](https://github.com/TrustVC/trustvc/compare/v1.5.0...v1.5.1) (2025-06-09)
 
 
