@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/TrustVC/trustvc/compare/v1.5.2...v1.5.3) (2025-06-13)
+
+
+### Bug Fixes
+
+* redacted document check ([#71](https://github.com/TrustVC/trustvc/issues/71)) ([413e295](https://github.com/TrustVC/trustvc/commit/413e295e5b53cace1bd86f8ec88ece0df265fce6))
+
 ## [1.5.2](https://github.com/TrustVC/trustvc/compare/v1.5.1...v1.5.2) (2025-06-10)
 
 
