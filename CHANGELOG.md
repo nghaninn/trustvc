@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/TrustVC/trustvc/compare/v1.5.5...v1.6.0) (2025-07-14)
+
+
+### Features
+
+* support passing titleEscrowAddress to fetchEndorsementChain ([#80](https://github.com/TrustVC/trustvc/issues/80)) ([aa7b4f0](https://github.com/TrustVC/trustvc/commit/aa7b4f0e355b1ec97c0dca8c5740a479d59aaeb2))
+
 ## [1.5.5](https://github.com/TrustVC/trustvc/compare/v1.5.4...v1.5.5) (2025-06-18)
 
 
