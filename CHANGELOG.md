@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/TrustVC/trustvc/compare/v1.6.0...v1.7.0) (2025-07-15)
+
+
+### Features
+
+* add astron v5 ([#81](https://github.com/TrustVC/trustvc/issues/81)) ([0bebeae](https://github.com/TrustVC/trustvc/commit/0bebeae60b0b8bc17f892254639465e4f86319b0))
+
 ## [1.6.0](https://github.com/TrustVC/trustvc/compare/v1.5.5...v1.6.0) (2025-07-14)
 
 
