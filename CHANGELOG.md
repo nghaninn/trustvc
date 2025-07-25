@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/TrustVC/trustvc/compare/v1.7.0...v1.7.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* update tradetrust-tt/tradetrust package ([#87](https://github.com/TrustVC/trustvc/issues/87)) ([e4f75a4](https://github.com/TrustVC/trustvc/commit/e4f75a472cc046c68203241c977262572c50be13))
+
 ## [1.7.0](https://github.com/TrustVC/trustvc/compare/v1.6.0...v1.7.0) (2025-07-15)
 
 
