@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/TrustVC/trustvc/compare/v1.7.2...v1.7.3) (2025-07-28)
+
+
+### Bug Fixes
+
+* error message types ([#89](https://github.com/TrustVC/trustvc/issues/89)) ([d83bada](https://github.com/TrustVC/trustvc/commit/d83bada0a7b73c86370b7fef8e5d0bdb025449ff))
+
 ## [1.7.2](https://github.com/TrustVC/trustvc/compare/v1.7.1...v1.7.2) (2025-07-28)
 
 
